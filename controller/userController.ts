@@ -28,7 +28,7 @@ export const createAccount = async (req: Request, res: Response) => {
     });
   } catch (error: any) {
     return res.status(404).json({
-      message: "error creating account",
+      message: error.message,
       status: 404,
     });
   }
